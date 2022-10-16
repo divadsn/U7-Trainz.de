@@ -1,0 +1,57 @@
+url: https://u7-trainz.de
+theme: null
+
+# Localization options
+lang: de
+timezone: Europe/Berlin
+
+# Site details
+title: U7-Trainz.de
+short_description: Die Berliner U-Bahn für Trainz
+description: Die Berliner U-Bahn von Marcel Kuhnt und Rüdiger Hülsmann für den Trainz Railroad Simulator.
+author: David Sn, TRRDroid, berlinsubwaydriver, TheFlash, Administrator
+copyright: 2022 U7-Trainz.de und M-R-Software, Trainz ist eine Marke von N3V Games.
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+disqus: u7-trainz-de
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-54671102-7
+
+# Social links
+social_links:
+  - title: YouTube
+    icon: youtube-play
+    url: https://youtube.com/TRRDroid
+  - title: Discord
+    icon: discord
+    url: https://discord.gg/u7-updated
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: highlight
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+# Plugins we want to use
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Site collections
+collections:
+  pages:
+    output: true
+    permalink: /:path.html

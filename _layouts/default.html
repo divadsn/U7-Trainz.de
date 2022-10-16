@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ site.lang }}" class="h-100">
+
+  {% include head.html %}
+
+  <body class="d-flex flex-column h-100">
+    {% include header.html %}
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ '/assets/js/jquery-3.6.0.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+  </body>
+
+</html>

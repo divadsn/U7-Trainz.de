@@ -1,0 +1,30 @@
+body {
+  background-image: url("/assets/images/background.jpg");
+}
+
+.jumbotron-ubahn {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/images/jumbotron.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px #000;
+}
+
+.card-text p:last-child {
+  margin-bottom: 0;
+}
+
+.ratio-2x1, .ratio-featured {
+  --bs-aspect-ratio: 50%;
+}
+
+.ratio-header {
+  --bs-aspect-ratio: calc(400 / 900 * 100%);
+}
+
+@media (min-width: 1200px) {
+  .ratio-featured {
+    --bs-aspect-ratio: calc(350 / 850 * 100%);
+  }
+}

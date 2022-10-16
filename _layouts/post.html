@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Post content-->
+      <article class="card mb-4">
+        <!-- Preview image figure -->
+        <figure class="card-img-top ratio ratio-featured mb-0" style="background: url('{{ page.image | relative_url }}') no-repeat center center; background-size: cover;"></figure>
+
+        <div class="card-body py-4">
+          <!-- Post header-->
+          <header class="card-text">
+            <!-- Post title-->
+            <h1 class="card-title">{{ page.title }}</h1>
+            <!-- Post meta content-->
+            <div class="text-muted mb-3"><i class="fa fa-calendar fa-fw"></i> {{ page.date | date: '%d.%m.%Y' }} <i class="fa fa-user fa-fw"></i> {{ page.author }}</div>
+          </header>
+
+          <!-- Post content-->
+          <section class="card-text">
+            {{ content }}
+          </section>
+        </div>
+      </article>
+
+      <!-- Comments section -->
+      <section class="card mb-4">
+        <div class="card-body">
+          {% include disqus.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

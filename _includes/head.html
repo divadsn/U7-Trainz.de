@@ -1,0 +1,50 @@
+<head>
+
+  <!-- So meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{% if page.excerpt %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
+
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.short_description }}{% endif %}</title>
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.short_description }}{% endif %}">
+  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/jumbotron.jpg' | absolute_url }}{% endif %}">
+  <meta property="og:image:type" content="image/jpeg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.short_description }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/jumbotron.jpg' | absolute_url }}{% endif %}">
+  <meta name="twitter:site" content="@divadsn">
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
+  <link rel="mask-icon" href="{{ '/assets/favicon/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+  <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+  <meta name="application-name" content="{{ site.title }}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="{{ '/assets/favicon/browserconfig.xml' | relative_url }}">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap and Fork Awesome -->
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/fork-awesome.min.css' | relative_url }}">
+
+  <!-- Page style -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  {% include google_analytics.html %}
+
+</head>
